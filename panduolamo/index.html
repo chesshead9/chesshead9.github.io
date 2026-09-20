@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="潘多拉魔盒 - 探索古希腊神话中潘多拉魔盒的起源、故事传说、象征意义及心理学解读。了解人类恐惧、希望与命运的奥秘。">
+    <meta name="keywords" content="潘多拉魔盒,古希腊神话,普罗米修斯,潘多拉,伊甸园,希望,恐惧">
+    <title>潘多拉魔盒 - 古希腊神话起源与象征意义深度解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #8e44ad;
+            --secondary-color: #c0392b;
+            --bg-color: #f4f6f7;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #732d91;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(142, 68, 173, 0.8)), url('https://picsum.photos/seed/pandora/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
+        /* Story Grid */
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .story-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .story-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .story-content {
+            padding: 25px;
+        }
+
+        .story-content h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .story-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* Mythology Table */
+        .mythology-wrapper {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #f9f9f9;
+        }
+
+        /* Symbolism Section */
+        .symbolism-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .symbol-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .symbol-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(142, 68, 173, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+        }
+
+        .symbol-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .symbol-text p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-menu {
+                display: none; /* Simplified for mobile */
+            }
+
+            .symbolism-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                padding: 0 15px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                潘多拉<span>魔盒</span>
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#story" class="active">神话故事</a></li>
+                    <li><a href="#symbolism">象征意义</a></li>
+                    <li><a href="#culture">文化影响</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#story" class="cta-button">开始探索</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>潘多拉魔盒：人类命运的终极隐喻</h1>
+                <p>从古希腊神话到现代心理学，探索“希望”与“恐惧”的永恒博弈，解读人类困境背后的深层含义。</p>
+                <a href="#story" class="hero-btn">阅读完整故事</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Story Section -->
+            <section id="story">
+                <div class="section-header">
+                    <h2>神话起源</h2>
+                    <p>赫西俄德《神谱》中的经典记载</p>
+                </div>
+                <div class="story-grid">
+                    <article class="story-card">
+                        <img src="https://picsum.photos/seed/muse/400/250" alt="赫西俄德与缪斯女神" class="story-img">
+                        <div class="story-content">
+                            <h3>宙斯的惩罚</h3>
+                            <p>普罗米修斯盗取天火后，宙斯为了报复，命令赫淮斯托斯用泥土创造了一个美丽的女性——潘多拉。她被赋予各种诱人的特质，作为对人类的礼物。</p>
+                            <a href="#" class="read-more">阅读更多 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="story-card">
+                        <img src="https://picsum.photos/seed/pandora/400/250" alt="潘多拉打开盒子" class="story-img">
+                        <div class="story-content">
+                            <h3>魔盒开启</h3>
+                            <p>潘多拉在好奇心的驱使下，最终打开了盒子。刹那间，疾病、死亡、战争、嫉妒等所有人类世间的灾难都飞了出来，扩散到世界各地。</p>
+                            <a href="#" class="read-more">阅读更多 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="story-card">
+                        <img src="https://picsum.photos/seed/hope/400/250" alt="留在盒底的希望" class="story-img">
+                        <div class="story-content">
+                            <h3>最后的希望</h3>
+                            <p>当潘多拉惊慌失措地关上盒子时，只有一样东西没有飞出来，那就是“希望”。它被留在了盒底，成为了人类在苦难中坚持生存的源泉。</p>
+                            <a href="#" class="read-more">阅读更多 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Detailed Mythology Table -->
+            <section id="mythology">
+                <div class="section-header">
+                    <h2>关键人物与元素</h2>
+                    <p>神话体系中核心角色的职能与关系</p>
+                </div>
+                <div class="mythology-wrapper">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>角色/元素</th>
+                                    <th>身份/象征</th>
+                                    <th>在故事中的作用</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>宙斯</strong></td>
+                                    <td>众神之王</td>
+                                    <td>策划者，制造潘多拉作为对普罗米修斯的惩罚。</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>普罗米修斯</strong></td>
+                                    <td>泰坦神</td>
+                                    <td>盗火者，因背叛宙斯而招致灾祸降临人类。</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>潘多拉</strong></td>
+                                    <td>人类女性</td>
+                                    <td>受好奇心驱使打开盒子，释放了灾难。</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>厄庇墨透斯</strong></td>
+                                    <td>普罗米修斯的兄弟</td>
+                                    <td>潘多拉的丈夫，在灾难降临前接收了潘多拉。</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>希望</strong></td>
+                                    <td>抽象概念</td>
+                                    <td>唯一留在盒底的神祇，象征人类在绝望中的韧性。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Symbolism Section -->
+            <section id="symbolism">
+                <div class="section-header">
+                    <h2>象征意义与现代解读</h2>
+                    <p>超越神话本身的文化与心理内涵</p>
+                </div>
+                <div class="symbolism-grid">
+                    <div class="symbol-item">
+                        <div class="symbol-icon">✨</div>
+                        <div class="symbol-text">
+                            <h4>人类的好奇心</h4>
+                            <p>潘多拉魔盒常被用来比喻人类无法抑制的好奇心。好奇心既是探索未知的动力，也可能带来不可预知的后果。</p>
+                        </div>
+                    </div>
+                    <div class="symbol-item">
+                        <div class="symbol-icon">🦠</div>
+                        <div class="symbol-text">
+                            <h4>原罪与苦难</h3>
+                            <p>在宗教和哲学语境中，魔盒象征着原罪。它解释了人类为何会经历痛苦、疾病和死亡，是命运无法逃避的一部分。</p>
+                        </div>
+                    </div>
+                    <div class="symbol-item">
+                        <div class="symbol-icon">❤️</div>
+                        <div class="symbol-text">
+                            <h4>希望的力量</h4>
+                            <p>即使在最黑暗的时刻，希望依然存在。这一象征鼓励人们在面对生活挫折时，不要放弃寻找生存的意义。</p>
+                        </div>
+                    </div>
+                    <div class="symbol-item">
+                        <div class="symbol-icon">🔒</div>
+                        <div class="symbol-text">
+                            <h4>控制与未知</h4>
+                            <p>魔盒是一个未知的容器，代表着人类对无法完全掌控事物的恐惧。它提醒我们要对未知保持敬畏。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq">
+                <div class="section-header">
+                    <h2>常见问题</h2>
+                    <p>关于潘多拉魔盒的常见误解与解答</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">潘多拉魔盒里真的装满了邪恶吗？</div>
+                        <div class="faq-answer">在传统神话中，盒子里确实装满了所有的灾难（疾病、战争、嫉妒等），只有“希望”留在了里面。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">为什么希望会留在盒子里？</div>
+                        <div class="faq-answer">神话通常解释为，如果希望也飞走了，人类将无法忍受苦难而彻底绝望。因此，希望被设计为一种守护机制。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">“潘多拉魔盒”这个词现在常用于什么场合？</div>
+                        <div class="faq-answer">现在常用来比喻“灾祸的根源”或“一旦打开就难以收拾的麻烦”，也常用于形容互联网带来的双刃剑效应。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">潘多拉和夏娃有什么区别？</div>
+                        <div class="faq-answer">两者都涉及禁果和原罪，但潘多拉是宙斯创造的礼物，夏娃是上帝创造的配偶。潘多拉的故事更多强调命运的安排而非神的考验。</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <p>致力于探索世界神话传说与人文历史，为读者提供权威、深度的文化解析。</p>
+            </div>
+            <div class="footer-col">
+                <h4>相关主题</h4>
+                <ul>
+                    <li><a href="#">古希腊神话</a></li>
+                    <li><a href="#">北欧神话</a></li>
+                    <li><a href="#">圣经故事</a></li>
+                    <li><a href="#">神话人物</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#story">神话故事</a></li>
+                    <li><a href="#symbolism">象征意义</a></li>
+                    <li><a href="#culture">文化影响</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 潘多拉魔盒 - 神话文化解析平台. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(child => {
+                    child.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩国搜索引擎 - 探索韩国互联网的窗口，提供韩国热门新闻、娱乐资讯、韩语学习资源及本地化搜索服务指南。">
+    <meta name="keywords" content="韩国搜索引擎,韩国网站,韩网入口,韩国新闻,韩国搜索">
+    <title>韩国搜索引擎 - 韩网门户与信息检索指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --text-dark: #333;
+            --text-light: #666;
+            --border-color: #e9ecef;
+            --accent-color: #ff4757;
+            --hover-bg: #f1f3f5;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: #fff;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-dark);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-color);
+        }
+
+        .main-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .search-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: var(--border-color);
+            color: var(--text-dark);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #004494;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0056b3 0%, #003d80 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .search-box-wrapper {
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .search-box-wrapper select {
+            padding: 0 15px;
+            border: none;
+            background: #f8f9fa;
+            color: var(--text-light);
+            font-size: 1rem;
+            border-right: 1px solid var(--border-color);
+            outline: none;
+            cursor: pointer;
+            border-radius: 0;
+        }
+
+        .search-box-wrapper input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .search-box-wrapper button {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 0 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 0;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        /* Section Styling */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* Cards */
+        .card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: #ddd;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background-color: #f0f0f0;
+        }
+
+        .card-body {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--primary-color);
+            background: rgba(0, 86, 179, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            align-self: flex-start;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .card-footer {
+            border-top: 1px solid var(--border-color);
+            padding: 10px 15px;
+            font-size: 0.8rem;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .rank-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ddd;
+            width: 20px;
+            flex-shrink: 0;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { color: #ff4757; }
+        .rank-list li:nth-child(2) .rank-num { color: #ffa502; }
+        .rank-list li:nth-child(3) .rank-num { color: #ffa502; }
+
+        .rank-link {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
+
+        .rank-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Categories */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .category-item {
+            background: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .category-item:hover {
+            background: #e9ecef;
+        }
+
+        .category-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .category-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 60px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            max-width: 300px;
+        }
+
+        .footer-col h3 {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            .main-nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>韩国搜索引擎</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">综合搜索</a></li>
+                    <li><a href="#">韩流娱乐</a></li>
+                    <li><a href="#">生活资讯</a></li>
+                    <li><a href="#">学习指南</a></li>
+                </ul>
+            </nav>
+            <div class="search-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>连接韩国互联网的窗口</h1>
+                <p>一站式韩国搜索引擎平台，汇集Naver、Daum等主流门户资源，为您提供精准的韩语资讯、娱乐内容及本地化服务。</p>
+                <div class="search-box-wrapper">
+                    <select>
+                        <option>全部搜索</option>
+                        <option>新闻资讯</option>
+                        <option>韩流娱乐</option>
+                        <option>生活服务</option>
+                        <option>学术研究</option>
+                    </select>
+                    <input type="text" placeholder="请输入韩语或中文关键词...">
+                    <button>搜索</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Main Content -->
+            <div class="main-content">
+                
+                <!-- Categories -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">热门分类</h2>
+                    </div>
+                    <div class="category-grid">
+                        <a href="#" class="category-item">
+                            <span class="category-icon">📰</span>
+                            <span class="category-name">韩国新闻</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🎬</span>
+                            <span class="category-name">影视综艺</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🎵</span>
+                            <span class="category-name">音乐榜单</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">👗</span>
+                            <span class="category-name">时尚美妆</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🎮</span>
+                            <span class="category-name">游戏电竞</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🍳</span>
+                            <span class="category-name">美食旅游</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🎓</span>
+                            <span class="category-name">教育留学</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🛒</span>
+                            <span class="category-name">电商购物</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Top News -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">今日头条</h2>
+                        <a href="#" style="font-size:0.9rem; color:var(--primary-color);">查看更多 &rarr;</a>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/korea1/400/250" alt="韩国新闻图片" class="card-img">
+                            <div class="card-body">
+                                <span class="card-tag">经济</span>
+                                <h3 class="card-title"><a href="#">韩国半导体产业2024年出口额创新高，技术领先全球</a></h3>
+                                <p class="card-excerpt">随着全球对芯片需求的持续增长，韩国主要半导体厂商财报表现亮眼，预计全年出口将突破千亿美元大关。</p>
+                                <div class="card-footer">
+                                    <span>10分钟前</span>
+                                    <span>韩国经济日报</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/korea2/400/250" alt="韩流娱乐图片" class="card-img">
+                            <div class="card-body">
+                                <span class="card-tag">娱乐</span>
+                                <h3 class="card-title"><a href="#">K-POP新组合出道首周专辑销量破百万，引发粉丝狂热</a></h3>
+                                <p class="card-excerpt">备受瞩目的新生代男子组合正式发行首张迷你专辑，上线24小时内销量突破50万张，刷新多项纪录。</p>
+                                <div class="card-footer">
+                                    <span>35分钟前</span>
+                                    <span>Star News</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/korea3/400/250" alt="旅游生活图片" class="card-img">
+                            <div class="card-body">
+                                <span class="card-tag">旅游</span>
+                                <h3 class="card-title"><a href="#">济州岛新开观光缆车，登顶俯瞰绝美海景</a></h3>
+                                <p class="card-excerpt">济州岛东部新落成的观光缆车成为热门打卡地，游客可在高空360度欣赏汉拿山与东海的壮丽景色。</p>
+                                <div class="card-footer">
+                                    <span>1小时前</span>
+                                    <span>韩联社旅游频道</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Tools & Guides -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">实用工具与指南</h2>
+                    </div>
+                    <div class="grid-4">
+                        <article class="card">
+                            <div class="card-body" style="text-align:center; padding:30px 15px;">
+                                <div style="font-size:2.5rem; margin-bottom:10px;">🇰🇷</div>
+                                <h3 class="card-title">Naver使用教程</h3>
+                                <p class="card-excerpt">详细解析韩国最大搜索引擎Naver的各项功能，包括地图、新闻聚合及购物服务。</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-body" style="text-align:center; padding:30px 15px;">
+                                <div style="font-size:2.5rem; margin-bottom:10px;">🗣️</div>
+                                <h3 class="card-title">韩语翻译助手</h3>
+                                <p class="card-excerpt">提供中韩双向实时翻译及常用语查询，助您在韩国生活或商务交流中无障碍沟通。</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-body" style="text-align:center; padding:30px 15px;">
+                                <div style="font-size:2.5rem; margin-bottom:10px;">📍</div>
+                                <h3 class="card-title">韩国生活指南</h3>
+                                <p class="card-excerpt">涵盖交通卡办理、便利店购物、医院挂号等实用生活信息，解决初来乍到者的后顾之忧。</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-body" style="text-align:center; padding:30px 15px;">
+                                <div style="font-size:2.5rem; margin-bottom:10px;">🎓</div>
+                                <h3 class="card-title">留学申请攻略</h3>
+                                <p class="card-excerpt">提供首尔大学、高丽大学等名校申请时间线、语言要求及面试技巧分享。</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Search Engine Comparison -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">主流韩国搜索引擎对比</h2>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>搜索引擎名称</th>
+                                    <th>主要特色</th>
+                                    <th>适用人群</th>
+                                    <th>中文支持</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Naver</strong></td>
+                                    <td>韩国流量最大的搜索引擎，拥有庞大的博客、新闻和地图数据库。</td>
+                                    <td>深度了解韩国互联网文化、查找韩语资料的用户。</td>
+                                    <td>有限（主要针对韩文）</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Daum</strong></td>
+                                    <td>韩国老牌门户网站，提供邮件、博客、股市等综合服务。</td>
+                                    <td>需要韩国综合社交和资讯服务的用户。</td>
+                                    <td>有限</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Nate</strong></td>
+                                    <td>以社交网络和博客起家，界面较为简洁。</td>
+                                    <td>喜欢博客阅读和社交互动的用户。</td>
+                                    <td>有限</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Google Korea</strong></td>
+                                    <td>全球通用搜索引擎，针对韩国市场有本地化优化。</td>
+                                    <td>需要检索全球资讯、多语言搜索的用户。</td>
+                                    <td>良好（中文支持较好）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                
+                <!-- Hot Search -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">24小时热榜</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num">1</span>
+                            <a href="#" class="rank-link">首尔江南区新开免税店开业促销活动</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">2</span>
+                            <a href="#" class="rank-link">2024年韩国留学签证最新政策解读</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">3</span>
+                            <a href="#" class="rank-link">韩国冬季热门旅游目的地推荐</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <a href="#" class="rank-link">最新K-Drama剧情解析与演员动态</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <a href="#" class="rank-link">韩国便利店便当热量排行榜</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Recommended Sites -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">推荐韩网</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num">•</span>
+                            <a href="#" class="rank-link">Naver Blog (韩语)</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">•</span>
+                            <a href="#" class="rank-link">DC Inside (论坛)</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">•</span>
+                            <a href="#" class="rank-link">Instiz (音乐榜单)</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">•</span>
+                            <a href="#" class="rank-link">Happy Together (综艺)</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">•</span>
+                            <a href="#" class="rank-link">The Korea Times (新闻)</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">订阅周报</h3>
+                    <p style="font-size:0.85rem; color:#666; margin-bottom:15px;">每周精选韩国互联网热点、实用工具及独家攻略，直接发送至您的邮箱。</p>
+                    <input type="email" placeholder="您的邮箱地址" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ddd; border-radius:4px;">
+                    <button class="btn btn-primary" style="width:100%;">订阅</button>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>韩国搜索引擎</h2>
+                <p>致力于为中文用户提供最精准、最全面的韩国互联网访问入口与信息服务。连接中韩文化，探索无限可能。</p>
+            </div>
+            <div class="footer-col">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="#">公司简介</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>帮助中心</h3>
+                <ul>
+                    <li><a href="#">使用指南</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>合作伙伴</h3>
+                <ul>
+                    <li><a href="#">Naver</a></li>
+                    <li><a href="#">Daum</a></li>
+                    <li><a href="#">Google Korea</a></li>
+                    <li><a href="#">Kakao</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 韩国搜索引擎. All rights reserved. 本网站为演示设计，非真实搜索引擎。</p>
+        </div>
+    </footer>
+
+</body>
+                              </html>

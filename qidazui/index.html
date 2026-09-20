@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="七大罪动漫 - 官方正版在线观看平台。收录七大罪完整动画、剧场版、角色介绍及剧情解析。提供高清流畅的动漫观看体验，涵盖《七大罪：圣战的预兆》、《诸神的黄昏》等经典作品。">
+    <meta name="keywords" content="七大罪动漫, 七大罪, 七大罪动画, 七大罪剧场版, 七大罪圣战, 七大罪诸神的黄昏">
+    <title>七大罪动漫-正版在线观看与角色资料库</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #f1faee;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(to bottom, rgba(29, 53, 87, 0.3), rgba(29, 53, 87, 0.9)), url('https://picsum.photos/seed/seven_sins_hero/1920/600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #c92a37;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 25px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-more {
+            color: #666;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .section-more:hover {
+            color: var(--primary-color);
+        }
+
+        /* Character Grid */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .char-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .char-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .char-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .char-info {
+            padding: 20px;
+        }
+
+        .char-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .char-title {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .char-desc {
+            font-size: 0.85rem;
+            color: #555;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Episodes List */
+        .episodes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ep-item {
+            display: flex;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .ep-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        .ep-number {
+            background-color: var(--secondary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .ep-info {
+            flex-grow: 1;
+        }
+
+        .ep-title {
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 4px;
+        }
+
+        .ep-meta {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .ep-btn {
+            padding: 8px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .info-block h3 {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .info-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .info-sidebar {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .sidebar-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .sidebar-label {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .sidebar-value {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                display: block;
+                width: 100%;
+                margin: 10px 0 0 0;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="#" class="logo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <span>七大罪动漫</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#characters">角色</a></li>
+                <li><a href="#episodes">更新</a></li>
+                <li><a href="#info">资讯</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>背叛与救赎的史诗<br>《七大罪》</h1>
+                <p>跟随骑士团团长梅利奥达斯，踏上寻找被陷害的国王、拯救王国免受圣战灾难的冒险旅程。这里有最热血的战斗、最深刻的羁绊。</p>
+                <div>
+                    <a href="#episodes" class="btn">开始观看</a>
+                    <a href="#info" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">核心角色</h2>
+                <a href="#" class="section-more">查看全部角色 &rarr;</a>
+            </div>
+            <div class="char-grid">
+                <article class="char-card">
+                    <img src="https://picsum.photos/seed/meliodas/400/500" alt="梅利奥达斯" class="char-img">
+                    <div class="char-info">
+                        <h3 class="char-name">梅利奥达斯</h3>
+                        <p class="char-title">“七”的团长 · 圣骑士</p>
+                        <p class="char-desc">外表看似少年，实为魔王后裔。性格开朗，拥有极高的魔法亲和力，是团队的灵魂人物。</p>
+                    </div>
+                </article>
+                <article class="char-card">
+                    <img src="https://picsum.photos/seed/elizabeth/400/500" alt="伊丽莎白" class="char-img">
+                    <div class="char-info">
+                        <h3 class="char-name">伊丽莎白</h3>
+                        <p class="char-title">“七”的代行者 · 神之族</p>
+                        <p class="char-desc">为了寻找失踪的梅利奥达斯而踏上旅程。拥有七种不同的魔法能力，被称为“神之族最后的希望”。</p>
+                    </div>
+                </article>
+                <article class="char-card">
+                    <img src="https://picsum.photos/seed/diane/400/500" alt="迪安" class="char-img">
+                    <div class="char-info">
+                        <h3 class="char-name">迪安</h3>
+                        <p class="char-title">“七”的重量 · 巨人族</p>
+                        <p class="char-desc">拥有惊人的怪力，性格温柔善良。在团队中担任保护者的角色，深爱着梅利奥达斯。</p>
+                    </div>
+                </article>
+                <article class="char-card">
+                    <img src="https://picsum.photos/seed/ban/400/500" alt="班" class="char-img">
+                    <div class="char-info">
+                        <h3 class="char-name">班</h3>
+                        <p class="char-title">“七”的吸血鬼 · 侠盗</p>
+                        <p class="char-desc">拥有不死之身和强大的再生能力。性格轻浮，喜欢喝酒和赌博，但实际上非常重情重义。</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Episodes Section -->
+    <section id="episodes" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">最新更新</h2>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn" style="padding: 5px 15px; font-size: 14px;">TV动画</button>
+                    <button class="btn" style="padding: 5px 15px; font-size: 14px; background: #ddd; color: #333;">剧场版</button>
+                </div>
+            </div>
+            <div class="episodes-list">
+                <a href="#" class="ep-item">
+                    <div class="ep-number">24</div>
+                    <div class="ep-info">
+                        <div class="ep-title">第24集：诸神的黄昏（前篇）</div>
+                        <div class="ep-meta">更新至第24集 | 23分钟 | 1080P</div>
+                    </div>
+                    <a href="#" class="ep-btn">观看</a>
+                </a>
+                <a href="#" class="ep-item">
+                    <div class="ep-number">23</div>
+                    <div class="ep-info">
+                        <div class="ep-title">第23集：圣战的终焉</div>
+                        <div class="ep-meta">更新至第23集 | 23分钟 | 1080P</div>
+                    </div>
+                    <a href="#" class="ep-btn">观看</a>
+                </a>
+                <a href="#" class="ep-item">
+                    <div class="ep-number">22</div>
+                    <div class="ep-info">
+                        <div class="ep-title">第22集：绝望的深渊</div>
+                        <div class="ep-meta">更新至第22集 | 23分钟 | 1080P</div>
+                    </div>
+                    <a href="#" class="ep-btn">观看</a>
+                </a>
+                <a href="#" class="ep-item">
+                    <div class="ep-number">21</div>
+                    <div class="ep-info">
+                        <div class="ep-title">第21集：真相的碎片</div>
+                        <div class="ep-meta">更新至第21集 | 23分钟 | 1080P</div>
+                    </div>
+                    <a href="#" class="ep-btn">观看</a>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#" class="btn" style="background-color: var(--secondary-color);">加载更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section id="info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-block">
+                    <h3>关于《七大罪》</h3>
+                    <div class="info-text">
+                        <p>《七大罪》是由日本漫画家铃木央创作的奇幻题材漫画作品，于2012年10月在《周刊少年Magazine》上开始连载。故事背景设定在一个拥有圣骑士团、妖精之森以及各种魔法种族共存的世界。</p>
+                        <p>故事围绕着“七宗罪”骑士团展开，他们因被指控杀害国王而被通缉。主角梅利奥达斯为了洗清冤屈并寻找失踪的国王，重新集结了被流放的伙伴们。随着剧情推进，世界的真相逐渐浮出水面，涉及到了神族、恶魔以及更高维度的力量。</p>
+                        <p>该作品不仅有着精彩的战斗场面和跌宕起伏的剧情，还深入探讨了背叛、信任、救赎以及种族之间的冲突等主题。动画版由A-1 Pictures制作，以其华丽的作画和高质量的配乐广受好评，是全球范围内非常知名的动漫作品之一。</p>
+                    </div>
+                </div>
+                <aside class="info-sidebar">
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">原著作者</span>
+                        <span class="sidebar-value">铃木央</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">动画制作</span>
+                        <span class="sidebar-value">A-1 Pictures</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">首播时间</span>
+                        <span class="sidebar-value">2014年10月</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">类型</span>
+                        <span class="sidebar-value">奇幻、冒险、战斗</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-label">官方平台</span>
+                        <span class="sidebar-value">Bilibili / 爱奇艺</span>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">网站简介</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">角色图鉴</a></li>
+                    <li><a href="#">剧场版</a></li>
+                    <li><a href="#">周边商城</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">观看指南</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 七大罪动漫资源站. 仅供动漫爱好者交流与学习使用，内容版权归原作者所有。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+                          </html>
